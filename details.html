@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destination Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="details.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 id="destination-name">Destination Name</h1>
+    </div>
+
+    <!-- Row for Image and About Section -->
+    <div class="details-row">
+      <div class="details-img">
+        <img id="destination-image" src="" alt="Destination">
+      </div>
+      <div class="details-content">
+        <h2>About the Destination</h2>
+        <p id="destination-description"></p>
+        <p><strong>Location:</strong> <span id="destination-location"></span></p>
+        <p><strong>Rating:</strong> <span id="destination-rating"></span> ⭐</p>
+        <a id="destination-navigator" class="navigator-btn" href="#" target="_blank">Navigate Here</a>
+      </div>
+    </div>
+
+    <!-- Famous Attractions Section -->
+    <div class="details">
+      <h2 class="section-title">Famous Attractions</h2>
+      <div id="attractions-container" class="cards-container">
+        <!-- Attractions will be inserted here dynamically -->
+      </div>
+    </div>
+
+    <!-- Residences Nearby Section -->
+    <div class="details">
+      <h2 class="section-title">Residences Nearby</h2>
+      <div id="residences-container" class="cards-container">
+        <!-- Residences will be inserted here dynamically -->
+      </div>
+    </div>
+
+    
+  </div>
+
+  <script src="details.js"></script>
+</body>
+</html>

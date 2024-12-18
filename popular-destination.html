@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popular-destination.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Popular Destinations</title>
+  <!-- <style>
+    /* Basic styles for the page */
+    #destinations-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .destination-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+    .destination-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style> -->
+</head>
+<body>
+  <h1>Popular Destinations</h1>
+  <div id="destinations-container" ></div>
+
+  <script>
+    // Fetch the category from the query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
+    
+    if (!category) {
+      console.error('No category provided!');
+      document.getElementById('destinations-container').innerHTML = '<p>No category selected. Please select a category.</p>';
+    }
+
+    // Fetch the destination data
+    fetch('destination.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to load destination data');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Fetched data:', data);  // Log the data to ensure it is being fetched correctly
+        
+        // Filter the destinations by category
+        const filteredDestinations = data.destinations.filter(destination => destination.category === category);
+        
+        if (filteredDestinations.length === 0) {
+          document.getElementById('destinations-container').innerHTML = `<p>No destinations found for category: ${category}</p>`;
+        } else {
+          const destinationsContainer = document.getElementById("destinations-container");
+          
+          // Clear previous results
+          destinationsContainer.innerHTML = "";
+
+          // Populate the container with filtered destinations
+          filteredDestinations.forEach(destination => {
+            const destinationCard = document.createElement("div");
+            destinationCard.classList.add("destination-card");
+
+            destinationCard.innerHTML = `
+              <img src="${destination.image}" loading="lazy" alt="${destination.name}">
+              <div class="destination-card-content">
+              <h3>${destination.name}</h3>
+              <p>${destination.location}</p>
+              <a class="details-btn" href="details.html?id=${destination.id}">More Details</a>
+              </div>
+            `;
+            
+            // Append the card to the container
+            destinationsContainer.appendChild(destinationCard);
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching destination data:', error);
+        document.getElementById('destinations-container').innerHTML = '<p>Error loading destinations. Please try again later.</p>';
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<img src="${destination.image}" alt="${destination.name}">
+            <div class="destination-card-content">
+              <h3>${destination.name}</h3>
+              <p>${destination.location}</p>
+              <a class="details-btn" href="details.html?id=${destination.id}">More Details</a>
+            </div>
+
+
+
+//hotel images
+1-->
+https://img.freepik.com/free-photo/hotel-room-interior-with-bedroom-area-living-space-kitchen_1262-12288.jpg?t=st=1734027276~exp=1734030876~hmac=e816fd86126b89697ce348de4341ddeadbfdaf608720478ad57934d3337df0ac&w=996
+2-->
+https://img.freepik.com/free-photo/pillow-travel-nobody-pillows-luxury_1203-4932.jpg?t=st=1734027392~exp=1734030992~hmac=21262a259acc44a0633b75b8a0c304ad06667c51e2624627e908cc712286359d&w=996
+3-->
+https://img.freepik.com/free-photo/swimming-pool_74190-1977.jpg?t=st=1734028381~exp=1734031981~hmac=696a21786fed29f1d10436ddcb66e83d9d69ff0ee089d0603e079ca41e6b6095&w=996
+4-->
+https://img.freepik.com/free-photo/swimming-pool_1203-3385.jpg?t=st=1734028416~exp=1734032016~hmac=d3e89e03f780a56fa9c29a5eff0c85084043e40c7abb225b6e35e5f1db14886a&w=996
+5-->watermark
+https://img.freepik.com/free-photo/huge-swimming-pool-near-hotel-resort-san-teodoro-sardinia_181624-9498.jpg?t=st=1734028493~exp=1734032093~hmac=2e61cec18763148e4a2da4aa8fbd466ffa1dd62121836e7398e1d83d4587904d&w=996
+6-->
+https://img.freepik.com/free-photo/amazing-view-dome-luxury-royal-hotel-bodrum-turkey_627829-7208.jpg?t=st=1734028540~exp=1734032140~hmac=c14e9fa6c5d3b3740a4ac5f50391378ed2620fde85cf56dde86431af519e40a0&w=996
+7-->
+https://img.freepik.com/free-photo/light-garden-luxury-pool-nature_1203-4908.jpg?t=st=1734028602~exp=1734032202~hmac=c9d769009b5a9311392b97950e0ce13581174c370d1662436920ce9ecf0a6ca4&w=996
+8-->watermark
+https://img.freepik.com/free-photo/white-bedroom-hotel_1150-12633.jpg?t=st=1734028748~exp=1734032348~hmac=96266bba690ec7aa0015d495cebcb614ab27b74134e4169ea62ea0651cad9bc2&w=996

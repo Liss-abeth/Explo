@@ -1,0 +1,67 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #E0E0E0; /* Light text for contrast */
+  padding: 20px;
+}
+
+#destinations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid columns */
+  gap: 20px; /* Uniform gap between cards */
+  margin: 0rem 3.5rem 0rem 3.5rem;
+}
+
+
+.destination-card {
+  background: #1E1E1E; /* Dark gray card background */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for dark theme */
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); /* Stronger hover shadow */
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destination-card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.destination-card-content h3 {
+  margin-bottom: 10px;
+  color: #ffffff; /* Purple accent for headers */
+}
+
+.destination-card-content p {
+  font-size: 0.9em;
+  color: #B3B3B3; /* Muted light gray for descriptions */
+}
+
+.details-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ffffff; 
+  color: #1E1E1E; /* Dark text for contrast */
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.details-btn:hover {
+  background: #7F39FB; 
+  color: white;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inder&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <title>Travel Website</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>`  
+<body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-container">
+          <div class="image-container">
+            <img src="/img/logonobgimg.svg" alt="logo" href="#landing">
+          </div>
+          <h3 id="Logo-name">EXPLO</h3>
+        </div>
+      
+        <div class="menu-icon" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      
+        <ul id="nav-menu">
+          <li><a href="#landing" class="nav-btn">Home</a></li>
+          <li><a href="#categories" class="nav-btn">Destinations</a></li>
+          <li><a href="#about" class="nav-btn">About</a></li>
+          <li><a href="#contact" class="nav-btn">Contact</a></li>
+          <li><a href="login.html" class="nav-btn">Login</a></li>
+        </ul>
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search for a destination...">
+          <button onclick="searchDestination()"><img src="img/search-logo.png" alt=""></button>
+        </div>
+        
+      </nav>
+    </header>
+    <section id="landing" class="landing-page">
+      <div class="main-text">
+        <h1>Welcome to Your <span>Travel Guide</span></h1>
+        <p>Discover your next adventure with ease and excitement.</p>
+      </div>
+      <button id="exploreBtn">Explore <img src="img/explore-button-img.png" alt=""></button>
+    </section>
+<!-- .................................. category............................................................................................. -->
+    <section id="categories">
+      <h1>Destinations</h1>
+      <div class="category-grid">
+        <button class="category-button" style="background-image: url('./img/hawaii-beach-landscape-with-nature-coastline.jpg');" data-category="beach" onclick="navigateToCategory('beach')">Beaches</button>
+        <button class="category-button" style="background-image: url('./img/majestic-mountain-range-tranquil-meadow-panoramic-beauty-generated-by-ai.jpg');" data-category="Mountains" onclick="navigateToCategory('mountain')">Mountains</button>
+        <button class="category-button" style="background-image: url('./img/WhatsApp Image 2024-12-08 at 23.54.18_23e72f01.jpg');" data-category="Cities" onclick="navigateToCategory('city')">Cities</button>
+        <button class="category-button" style="background-image: url('./img/WhatsApp Image 2024-12-08 at 23.49.15_c53ea9f7.jpg');" data-category="Forests" onclick="navigateToCategory('forest')">Forests</button>
+        <button class="category-button" style="background-image: url('./img/adventurous-young-man-desert (1).jpg');" data-category="Deserts" onclick="navigateToCategory('desert')">Deserts</button>
+        <button class="category-button" style="background-image: url('./img/aerial-shot-small-green-island-middle-ocean.jpg');" data-category="Islands" onclick="navigateToCategory('island')">Islands</button>
+        <button class="category-button" style="background-image: url('./img/WhatsApp Image 2024-12-08 at 23.58.34_e02eb17b.jpg');" data-category="Historical Sites" onclick="navigateToCategory('historical-sites')">Historical Sites</button>
+        <button class="category-button" style="background-image: url('./img/horizontal-shot-beach-with-person-gliding-down-paramotor-parachute.jpg');" data-category="Adventure Spots" onclick="navigateToCategory('adventure-spots')">Adventure Spots</button>
+        <button class="category-button" style="background-image: url('./img/WhatsApp Image 2024-12-09 at 00.09.24_e8a40479.jpg');" data-category="Religion" onclick="navigateToCategory('religion')">Religious Sites</button>
+      </div>
+    </section>
+
+<!-- ........................................................end of catogry button......................................................................................... -->
+    
+
+<!-- .......................................... Famous place.................................................................................... -->
+
+<section class="famous-spots">
+  <h1>Famous Spots</h1>
+  <div class="slider">
+    <div class="slider-img">
+      <img src="./img/two-people-standing-colums-near-arch-constantine.jpg" alt="Famous Spot 1">
+      <img src="./img/beautiful-vertical-shot-taj-mahal-building-agra-india-clear-sky.jpg" alt="Famous Spot 2">
+      <img src="./img/eiffel-tower-champ-de-mars-paris-france.jpg" alt="Famous Spot 3">
+      <img src="./img/beautiful-shot-famous-roman-colosseum-amphitheater-breathtaking-sky-sunrise.jpg" alt="Famous Spot 4">
+      <img src="./img/pagoda-bagan.jpg" alt="Famous Spot 5">
+    </div>
+  </div>
+  <div class="view-more">
+    <a href="#"> → View More</a>
+  </div>
+</section>
+<!-- ...................................................... end of famous place.............................................................. -->
+
+ <!-- .............................................. About...................................................................... -->
+ <section id="about" class="about-container">
+  <h1>About Us</h1>
+  <p>Your Gateway to Memorable Travel and Culinary Adventures</p>
+
+  <section class="about-content">
+    <div class="about-img">
+      <img src="./img/WhatsApp Image 2024-12-09 at 11.18.54_352a33f1.png" alt="" srcset="">
+    </div>
+    <div class="about-divs">
+      <div class="about-text">
+        <h2>Who We Are</h2>
+        <p>
+          Welcome to our travel and tourism website! We are passionate about connecting you to the world's most
+          breathtaking destinations and the finest culinary experiences. From serene beaches to majestic mountains,
+          and from world-famous landmarks to hidden local gems, we ensure that your journeys are unforgettable.
+        </p>
+      </div>
+
+      <div class="about-text">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to inspire wanderlust and make it easy for you to explore the world’s beauty. We also
+          celebrate global cuisines by bringing you closer to the authentic recipes and traditions of different
+          cultures. Whether you’re traveling for leisure or seeking adventure, we have something for everyone.
+        </p>
+      </div>
+    </div>
+  </section>
+</section>
+    <!-- .................................end about...................................................................... -->
+
+
+<!-- .........................................Contact.................................................................................... -->
+    <section id="contact" class="body-cont">
+
+      <div class="contact-container">
+        <div class="left-section">
+          <img src="./img/rb_2147775638.png" alt="Contact Us" class="contact-image">
+        </div>
+        <div class="right-section">
+          <h2>Contact Us</h2>
+          <p>We'd love to hear from you! Please fill out the form below, and we'll get back to you as soon as possible.</p>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+      
+    </section>
+<!-- ..............................................................end of contact..................................................................... -->
+
+  <!-- Footer Section -->
+  <footer class="cs-footer cs-style1 cs-parallax">
+    <div class="container">
+      <!-- About Section -->
+      <div class="cs-footer__item">
+        <h2 class="cs-widget__title">Follow us on</h2>
+        <div class="footer-section contact">
+            <div class="social-icons">
+              <a href="#"><img src="./img/facebook (2).png" alt="Facebook" width="32px"></a>
+              <a href="#"><img src="./img/twitter (2).png" alt="Twitter"></a>
+              <a href="#"><img src="./img/instagram (3).png" alt="Instagram" width="32px"></a>
+            </div>
+          </div>
+        <div class="cs-social__btns cs-style1">
+          <a href="https://www.facebook.com/profile.php?id=100094244007837"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/healty_cs"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/healty.cs/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="cs-footer__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15716.192146552588!2d76.3318912!3d10.012891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1733769596895!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+  
+     
+      <!-- Support Section -->
+      <div class="cs-footer__item widget_nav_menu">
+        <h2 class="cs-widget__title">Support</h2>
+        <ul class="menu">
+          <li>If you have any question, contact us through email:</li>
+          <li><b><a href="mailto:info@explo.com"> infotravelguide@explo.com</a></b></li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="cs-footer__item widget_nav_menu">
+        <h2 class="cs-widget__title">Quick Links</h2>
+        <ul class="menu">
+            
+                <li><a href="#landing">Home</a></li>
+                <li><a href="#categories">Destinations</a></li>
+                <li><a href="#contact">Contact</a></li>
+              
+        </ul>
+      </div>
+    </div>
+  
+    <div class="cs-copyright">
+      <div>© 2024 - Travel by wee. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>                    
